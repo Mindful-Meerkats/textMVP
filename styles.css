@@ -1,0 +1,67 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700italic,400italic,300italic,900|Roboto+Slab|Ubuntu:400,500italic,500,700);
+
+.texttag {
+  text-align: center;
+  height: auto;
+  width: 50%;
+  padding: 5px;
+  position: relative;
+  padding-top: 10%;
+  align-self: center;
+  margin: auto;
+
+  align-items: center;
+  justify-content: center;
+}
+
+#quest, #title{
+  display: block;
+}
+
+#title{
+}
+
+#quest {
+  margin:0;
+}
+
+.footer{
+  align-self: flex-end;
+  font-size: 0.4em;
+  text-align: center;
+  margin:auto;
+  margin-bottom: 30px;
+}
+html {
+    font-size: 30px;
+}
+
+@media only screen and (max-width: 767px) {
+    body {
+        -webkit-text-size-adjust: none;
+        -ms-text-size-adjust: none;
+        width: 100%;
+        min-width: 0
+    }
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+body {
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+    background: #fec422;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    color: #fff;
+    position: relative;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    display: flex;
+    flex-direction: column;
+}
