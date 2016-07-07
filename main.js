@@ -11,7 +11,8 @@ var backgroundColors = [
     '#043f4c',
     '#fe5f55'
 ];
-
+var date = new Date();
+var task;
 
 var refreshTasks = function() {
 
@@ -30,20 +31,18 @@ var refreshTasks = function() {
             console.log('There was an error fetching new compliments: ' + textStatus);
         })
         .always(function() {
+            task = Math.floor(Math.random()* tasks.length);
             showNewCompliment();
         });
 }
 
 var showNewCompliment = function() {
+    if(task == tasks.length-1) task = 0;
     setRandomBackground();
-    var date = new Date();
-    var i =  Math.floor(Math.random()*tasks.length);
-    var newCompliment = tasks[i];
+    var newCompliment = tasks[task];
     $('.title').text(newCompliment);
     // Set link path here
-    console.log(tasks[i]);
-    console.log(links[i]);
-    $('.quest').text(links[i]);
+    $('.quest').text(links[task]);
 }
 
 
@@ -69,10 +68,29 @@ $(document).ready(function() {
     $('li').css('background-color', $('body').css('background-color'));
 
     $('#body').click(function() {
+        task = Math.floor(Math.random()* tasks.length);
         showNewCompliment();
     });
     $('#body').on("tap",function() {
+        task = Math.floor(Math.random()* tasks.length);
         showNewCompliment();
+    });
+    $('#body').on("swiperight", function () {
+        task++;
+        showNewCompliment();
+    });
+    $('#body').on("swipeleft", function () {
+        task--;
+        showNewCompliment();
+    });
+    $(document).keydown(function (e) {
+        if(e.keyCode == 37) {
+          task --;
+          showNewCompliment();
+        }
+        else if (e.keyCode == 39) {
+          task++;
+        showNewCompliment();}
     });
 
 });
