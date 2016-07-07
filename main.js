@@ -84,13 +84,11 @@ $(document).ready(function() {
         showNewCompliment();
     });
     $(document).keydown(function (e) {
-        if(e.keyCode == 37) {
+        if(e.keyCode == 37)
           task --;
-          showNewCompliment();
-        }
-        else if (e.keyCode == 39) {
+        else if (e.keyCode == 39)
           task++;
-        showNewCompliment();}
+        showNewCompliment();
     });
 
 });
