@@ -68,7 +68,7 @@ $(document).ready(function() {
     $('li').css('background-color', $('body').css('background-color'));
 
     var body = $("#body");
-    foo.enableTouch();
+    body.enableTouch();
     body.click(function() {
             task = Math.floor(Math.random() * tasks.length);
             showNewCompliment();
