@@ -73,15 +73,15 @@ $(document).ready(function() {
             task = Math.floor(Math.random() * tasks.length);
             showNewCompliment();
         })
-        .on("tap", function() {
+    body.on("tap", function() {
             task = Math.floor(Math.random() * tasks.length);
             showNewCompliment();
         })
-        .on("swipeRight", function() {
+    body.on("swipeRight", function() {
             task++;
             showNewCompliment();
         })
-        .on("swipeLeft", function() {
+    body.on("swipeLeft", function() {
             task--;
             showNewCompliment();
         });
