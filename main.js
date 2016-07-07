@@ -31,13 +31,13 @@ var refreshTasks = function() {
             console.log('There was an error fetching new compliments: ' + textStatus);
         })
         .always(function() {
-            task = Math.floor(Math.random()* tasks.length);
+            task = Math.floor(Math.random() * tasks.length);
             showNewCompliment();
         });
 }
 
 var showNewCompliment = function() {
-    if(task == tasks.length-1) task = 0;
+    if (task == tasks.length - 1) task = 0;
     setRandomBackground();
     var newCompliment = tasks[task];
     $('.title').text(newCompliment);
@@ -67,27 +67,28 @@ $(document).ready(function() {
     // $('body').css('background-color', bgcolor);
     $('li').css('background-color', $('body').css('background-color'));
 
-    $('#body').click(function() {
-        task = Math.floor(Math.random()* tasks.length);
-        showNewCompliment();
-    });
-    $('#body').on("tap",function() {
-        task = Math.floor(Math.random()* tasks.length);
-        showNewCompliment();
-    });
-    $('#body').on("swiperight", function () {
-        task++;
-        showNewCompliment();
-    });
-    $('#body').on("swipeleft", function () {
-        task--;
-        showNewCompliment();
-    });
-    $(document).keydown(function (e) {
-        if(e.keyCode == 37)
-          task --;
+    var body = $("#body");
+    body.click(function() {
+            task = Math.floor(Math.random() * tasks.length);
+            showNewCompliment();
+        })
+        .on("tap", function() {
+            task = Math.floor(Math.random() * tasks.length);
+            showNewCompliment();
+        })
+        .on("swipeRight", function() {
+            task++;
+            showNewCompliment();
+        })
+        .on("swipeLeft", function() {
+            task--;
+            showNewCompliment();
+        });
+    $(document).keydown(function(e) {
+        if (e.keyCode == 37)
+            task--;
         else if (e.keyCode == 39)
-          task++;
+            task++;
         showNewCompliment();
     });
 
