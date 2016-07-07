@@ -43,6 +43,9 @@ html {
         width: 100%;
         min-width: 0
     }
+    .footer{
+      font-size: 0.1em;
+    }
 }
 
 * {

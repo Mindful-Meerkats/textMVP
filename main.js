@@ -68,10 +68,10 @@ $(document).ready(function() {
     // $('body').css('background-color', bgcolor);
     $('li').css('background-color', $('body').css('background-color'));
 
-    $('#text').click(function() {
+    $('#body').click(function() {
         showNewCompliment();
     });
-    $('#text').on("tap",function() {
+    $('#body').on("tap",function() {
         showNewCompliment();
     });
 
