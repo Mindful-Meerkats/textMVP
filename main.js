@@ -71,5 +71,8 @@ $(document).ready(function() {
     $('#text').click(function() {
         showNewCompliment();
     });
+    $('#text').on("tap",function() {
+        showNewCompliment();
+    });
 
 });
