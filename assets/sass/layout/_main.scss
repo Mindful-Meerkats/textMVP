@@ -1,0 +1,65 @@
+@import '../libs/vars';
+@import '../libs/functions';
+@import '../libs/mixins';
+
+///
+/// Identity by HTML5 UP
+/// html5up.net | @n33co
+/// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+///
+
+/* Main */
+
+	#main {
+		z-index: 2 !important;
+		position: relative;
+		max-width: 60%;
+		min-width: 50%;
+		height: auto;
+		@include vendor('align-self', 'center');
+		@include padding(4.5em, 3em);
+		margin: auto;
+
+		cursor: default;
+		text-align: center;
+		font-family: _font(family);
+		font-weight: _font(weight);
+
+
+		@include vendor('transform-origin', '50% 50%');
+		@include vendor('transform', 'rotateX(0deg)');
+		@include vendor('transition', (
+			'opacity #{_duration(main)} ease',
+			'transform #{_duration(main)} ease'
+		));
+		@include vendor('align-items','center');
+		@include vendor('justify-content','center');
+
+		h1{
+			color: _palette(fg);
+			font: inherit;
+			text-transform: uppercase;
+			text-shadow: solid 1px;
+		}
+
+		#title {
+			display: block;
+			font-size: 2.5em
+		}
+		#quest{
+			display: block;
+			margin: 0;
+			font-size: 1.75em
+		}
+
+		@include breakpoint(xsmall) {
+			min-width: 0;
+			width: 100%;
+			@include padding(4em, 2em);
+		}
+
+		body.is-loading & {
+			opacity: 0;
+			@include vendor('transform', 'rotateX(15deg)');
+		}
+	}

@@ -67,7 +67,7 @@ $(document).ready(function() {
     // $('body').css('background-color', bgcolor);
     $('li').css('background-color', $('body').css('background-color'));
 
-    var body = $("#body");
+    var body = $('#main');
     body.on("click",function() {
             task = Math.floor(Math.random() * tasks.length);
             showNewCompliment();

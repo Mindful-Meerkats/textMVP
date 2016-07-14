@@ -1,0 +1,48 @@
+// Misc.
+	$misc: (
+		z-index-base:		10000
+	);
+
+// Duration.
+	$duration: (
+		transition:			0.2s,
+		bg:					1.75s,
+		main:				1s
+	);
+
+// Size.
+	$size: (
+		border-radius:		0px,
+		border-width:		1px,
+		element-height:		2.75em,
+		element-margin:		1.5em,
+		letter-spacing:		0.2em,
+	);
+
+	// Icon button size
+	$button: (
+		lheight:  0.5em,
+		size:			2.5em,
+	);
+
+// Font.
+	$font: (
+		family:				('Lato', Helvetica, sans-serif),
+		family-fixed:		('Courier New', monospace),
+		weight:				400
+	);
+
+// Palette.
+	$palette: (
+		bg:					#fec422,
+		bg-alt:				#e1dfe8,
+		fg:					#ffffff,
+		fg-bold:			#6b8594,
+		fg-light:			#93a9b5,
+		border:				#c8cccf,
+		accent1:			#ffa596,
+		accent2:			#00e4ff,
+		highlight:			#ff7496,
+		nullo:				rgba(0,0,0,0),
+		blackish:			#1b1b1b
+	);
