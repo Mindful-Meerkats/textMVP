@@ -18,7 +18,7 @@
 		@include vendor('flex-direction', 'row');
 		@include vendor('flex-wrap', 'nowrap');
 		width: 100%;
-		padding: _size(element-margin) 0 0 0;
+		padding: 0;
 		color: rgba(255,255,255,0.75);
 		cursor: default;
 		text-align: center;
