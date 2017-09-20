@@ -16,8 +16,8 @@ var task;
 
 var refreshTasks = function() {
 
-    $.getJSON('http://cors.io/?u=http://rage.dance/dev/task.json', function(data) {
-            console.log(data);
+    $.getJSON('/task.json', function(data) {
+            //console.log(data);
             tasks = [];
             links = [];
             for (var i = 0; i < data.length; i++) {
@@ -59,9 +59,9 @@ $(document).ready(function() {
 
     var loc = (window.location.pathname.split('/').length > 0) ? window.location.pathname.split('/').reverse()[0] : '/index.html';
     if (loc == '') loc = '/';
-    console.log(loc);
+    //console.log(loc);
 
-    console.log('Index page setup');
+    //console.log('Index page setup');
     refreshTasks();
 
     // $('body').css('background-color', bgcolor);
