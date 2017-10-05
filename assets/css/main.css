@@ -458,22 +458,6 @@ button,
       #header .menu li a {
         font-size: 0.6em; }
 
-/* Footer */
-#footer {
-  -moz-align-self: -moz-flex-end;
-  -webkit-align-self: -webkit-flex-end;
-  -ms-align-self: -ms-flex-end;
-  align-self: flex-end;
-  width: 100%;
-  padding: 1.5em 0 0 0;
-  color: rgba(255, 255, 255, 0.75);
-  cursor: default;
-  text-align: center;
-  margin: 0;
-  font-size: 0.5em;
-  list-style: none; }
-  #footer a {
-    z-index: 1; }
 
 /* Wrapper */
 #wrapper {
@@ -512,4 +496,21 @@ button,
   body.is-ie #wrapper {
     height: 100%; }
 
+/* Footer */
+#footer {
+  -moz-align-self: -moz-flex-end;
+  -webkit-align-self: -webkit-flex-end;
+  -ms-align-self: -ms-flex-end;
+  align-self: flex-end;
+  width: 100%;
+  padding: 1.5em 0 0 0;
+  color: rgba(255, 255, 255, 0.75);
+  cursor: default;
+  text-align: center;
+  margin: 0;
+  font-size: 0.5em;
+  list-style: none;
+  z-index: 2; }
+  #footer a {
+    z-index: 3; }
 /*# sourceMappingURL=main.css.map */
